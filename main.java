@@ -6,11 +6,14 @@ Obs: Aberto a sugestões de melhorias e auxilios
 */
 
 //Imports
+import javax.lang.model.util.SimpleElementVisitor14;
 import java.io.*;
 import java.nio.file.*;
+import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+class Iniciar{
+    public static void Varredura(Scanner scan){
+        
         String filePath = "C:\\temp\\arquivoexemplo.txt"; //Irá selecionar o arquivo com suposto malware
         String maliciousString = "stringmalware"; //Irá fazer a varredura pela string malware
 
@@ -28,6 +31,23 @@ public class Main {
             }
         } else {
             System.out.println("O arquivo não existe.");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Seja bem vindo!\nAperte [1] para iniciar a varredura pelo arquivo em quarentena.\nOu [2] para Sair.");
+        int actions = scan.nextInt();
+
+        if (actions == 1){
+            Iniciar.Varredura(scan);
+        } else if (actions == 2){
+            System.out.println("Até mais . . .");
+        } else {
+            System.out.println("Ação inválida!");
         }
     }
 }
