@@ -13,8 +13,10 @@ import java.util.Scanner;
 
 class Iniciar{
     public static void Varredura(Scanner scan){
-        
-        String filePath = "C:\\temp\\arquivoexemplo.txt"; //Irá selecionar o arquivo com suposto malware
+
+        System.out.print("Informe o caminho do arquivo: ");
+        //String filePath = "C:\\temp\\arquivoexemplo.txt"; //Irá selecionar o arquivo com suposto malware
+        String filePath = scan.next();
         String maliciousString = "stringmalware"; //Irá fazer a varredura pela string malware
 
         Path path = Paths.get(filePath);
