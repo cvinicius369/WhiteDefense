@@ -22,6 +22,7 @@ class Iniciar{
         Path path = Paths.get(filePath);
         if (Files.exists(path)) {
             try {
+                System.out.println("Escaneando . . . ");
                 String fileContent = new String(Files.readAllBytes(path));
                 if (fileContent.contains(maliciousString)) {
                     System.out.println("Risco de Malware!.");
