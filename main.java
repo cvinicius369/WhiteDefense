@@ -42,12 +42,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Seja bem vindo!\nAperte [1] para iniciar a varredura pelo arquivo em quarentena.\nOu [2] para Sair.");
-        int actions = scan.nextInt();
+        System.out.println("Seja bem vindo!\nDigite start para iniciar: ");
+        args = scan.next();
 
-        if (actions == 1){
+        if (args == "start"){
             Iniciar.Varredura(scan);
-        } else if (actions == 2){
+        } else if (args == "sair"){
             System.out.println("Até mais . . .");
         } else {
             System.out.println("Ação inválida!");
